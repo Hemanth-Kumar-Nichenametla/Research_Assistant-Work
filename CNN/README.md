@@ -26,6 +26,12 @@ If we keep on increasing the number of filters then the dimensionality of the da
 
 ![Sample Image](images/2.jpeg)
 
+*** Applications of CNN are: ***
+
+1. Image Classification.
+2. Converting low resolution images to High resolution images.
+3. 
+
 
 
 
