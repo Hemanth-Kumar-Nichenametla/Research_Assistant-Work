@@ -18,7 +18,7 @@ Image + Text + Audio
 
 Text + Audio 
 
-### **Fusion: **
+### **Fusion:**
 
 Fusion involves the process of amalgamating information from two or more modalities to accomplish predictive tasks. Effectively combining multiple modalities like video, speech, and text poses a formidable challenge due to the diverse nature of multimodal data.  
 
