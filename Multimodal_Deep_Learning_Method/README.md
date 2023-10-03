@@ -27,6 +27,32 @@ The fusion of heterogeneous information constitutes the crux of multimodal resea
 Additionally, a critical decision to be made is whether to opt for early or late fusion. Early fusion integrates features right after their extraction, employing some of the fusion methods mentioned earlier. Conversely, in late fusion, integration occurs only after each unimodal network produces predictions, be it for classification or regression tasks. Late fusion typically involves techniques like voting schemes, weighted averages, or other methods. Hybrid fusion techniques have also emerged, which blend outputs from early fusion and unimodal predictors, offering a diverse approach to multimodal data integration.
 
 
+
+In the procedure outlined for building a multimodal deep learning model that combines image and structured data, the step for feature extraction of images involves using a pre-trained Convolutional Neural Network (CNN) to extract meaningful representations or features from the input images. Here's a more detailed explanation of what the neural network does during this process:
+
+## Convolutional Layers:
+
+The input image is passed through a series of convolutional layers. These layers are designed to capture different patterns, textures, and features within the image. In the initial layers, low-level features like edges and simple shapes are detected, while deeper layers capture more complex and abstract features.
+
+## Pooling Layers:
+
+After each convolutional layer, pooling layers (typically max-pooling or average-pooling) are applied to reduce the spatial dimensions of the feature maps. This reduces the computational complexity of the model and helps in creating translation-invariant representations.
+
+## Flattening:
+
+The output from the convolutional and pooling layers is flattened into a 1D vector. This prepares the extracted features to be fed into fully connected layers.
+
+## Fully Connected Layers (Optional):
+
+In some cases, fully connected layers are added after the convolutional layers to further process the extracted features. These layers can capture complex relationships between the extracted features.
+
+## Output Layer (Optional):
+
+Depending on the specific architecture, there may be an output layer for the pre-trained CNN. However, when using a pre-trained CNN as a feature extractor in a multimodal model, you typically remove the final classification layers. The features extracted up to this point are what you'll use.
+By the end of this process, the pre-trained CNN has transformed the input image into a vector of high-level features that encode relevant information about the image. These features can then be combined with the features extracted from the structured data (e.g., numerical or categorical data) in your multimodal model.
+
+
+
 ## Early Fusion:
 
 In the early fusion approach with deep neural networks, where you combine both structured data and image data at the beginning of the network architecture, the form of the data that is sent into the final classification layer depends on how you choose to merge or concatenate the representations from the two modalities. Typically, you'll have two separate branches for each modality, and the form of data sent to the final classification layer can be one of the following:
